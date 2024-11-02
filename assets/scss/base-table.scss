@@ -1,0 +1,272 @@
+.table-body-wrapper {
+  border-radius: calc(var(--ct-border-radius) + 2px);
+  background-color: #ffffff;
+  box-shadow: var(--ct-box-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 0;
+
+  .table-body {
+    .dataTable {
+      width: 100%;
+      min-width: -webkit-fill-available;
+
+      thead {
+        position: sticky;
+        top: -0.02px;
+        z-index: 1;
+        transition: all var(--ct-transition-duration) ease;
+
+        tr {
+          background-color: var(--ct-secondary);
+          th {
+            border: var(--ct-border-width) solid var(--ct-table-border-color);
+            width: max-content;
+
+            & > div {
+              min-width: -webkit-fill-available;
+              width: max-content;
+              padding-top: calc(var(--ct-table-cell-padding-y) + 2px);
+              padding-bottom: calc(var(--ct-table-cell-padding-y) + 2px);
+              padding-left: var(--ct-table-cell-padding-x);
+              padding-right: var(--ct-table-cell-padding-x);
+              line-height: 1;
+            }
+
+            .th-text {
+              font-size: inherit;
+              font-weight: bold;
+              line-height: 135%;
+              color: var(--ct-table-th-color);
+            }
+
+            .c-fa-sort-up,
+            .c-fa-sort-down {
+              color: rgb(237 237 237 / 54%);
+
+              &:hover {
+                color: var(--ct-primary) !important;
+              }
+            }
+
+            .c-fa-sort-up {
+              margin-bottom: -4px;
+            }
+
+            .c-fa-sort-down {
+              margin-top: -4px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 8px 10px;
+            border: var(--ct-border-width) solid var(--ct-border-color);
+            white-space: nowrap;
+          }
+
+          &:hover {
+            background-color: var(--ct-table-tr-hover) !important;
+          }
+
+          &.no-data {
+            td {
+              border: none !important;
+            }
+
+            &:hover {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-responsive {
+  overflow-y: scroll;
+  scrollbar-color: #a0a0a0 #f2f2f2;
+  scrollbar-width: thin !important;
+  // height: calc(100svh - 344px);
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.loading-tr {
+  &:hover {
+    background: transparent;
+  }
+
+  td {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .table-skeleton {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+
+    &.skeleton-gradient {
+      background: linear-gradient(-90deg, #eee 8%, #ddd 18%, #eee 33%);
+      background-size: 50% 100%;
+      -webkit-animation: slide 1s infinite linear forwards;
+      -moz-animation: slide 1s infinite linear forwards;
+      animation: slide 1s infinite linear forwards;
+    }
+
+    .skeleton-content {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          border-bottom: 1px solid var(--ct-table-border-color);
+          box-sizing: border-box;
+          height: 52px;
+          padding: 10px 15px;
+          position: relative;
+
+          &:before,
+          &:after {
+            background-color: var(--ct-white);
+            content: '';
+            position: absolute;
+            height: 10px;
+            left: 0;
+            top: 0;
+            width: 100%;
+          }
+
+          &:after {
+            height: 12px;
+            top: 39px;
+          }
+
+          .skeleton-img {
+            float: left;
+            height: 30px;
+            position: relative;
+            width: 30px;
+
+            &:before,
+            &:after {
+              background-color: var(--ct-white);
+              content: '';
+              position: absolute;
+              height: 34px;
+              left: -15px;
+              top: 0;
+              width: 15px;
+            }
+
+            &:after {
+              left: 30px;
+            }
+          }
+
+          .skeleton-data {
+            background-color: var(--ct-white);
+            float: left;
+            height: 16px;
+            margin-left: 75px;
+            position: relative;
+            width: calc(100% - 120px);
+
+            &:before,
+            &:after {
+              background-color: var(--ct-white);
+              content: '';
+              height: 4px;
+              left: -60px;
+              position: absolute;
+              right: initial;
+              top: 12px;
+              width: 60px;
+            }
+
+            &:after {
+              height: 14px;
+              left: initial;
+              right: -30px;
+              top: 0;
+              width: 30px;
+            }
+          }
+
+          .skeleton-texto {
+            background-color: var(--ct-white);
+            position: absolute;
+            height: 20px;
+            right: 0;
+            top: 24px;
+            width: 15px;
+          }
+
+          .skeleton-w85 {
+            width: 15%;
+          }
+
+          .skeleton-w80 {
+            width: 5%;
+          }
+
+          .skeleton-w65 {
+            width: 35%;
+          }
+
+          .skeleton-w60 {
+            width: 40%;
+          }
+
+          .skeleton-w45 {
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @-moz-keyframes slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}
+@media (max-width: 860px) {
+  .table-header {
+    display: block;
+  }
+
+  .dataTable > tbody td {
+    white-space: nowrap;
+  }
+}
