@@ -1,7 +1,8 @@
 <template>
-  <div class="">
-    <div class="banner">
-      <div class="w-full relative">
+  <div>
+    <div class="">
+    <div class="">
+      <div class="w-full">
         <img
           class="bg-black opacity-100 w-full"
           src="../../assets/images/banner-1.png"
@@ -63,16 +64,43 @@
           </div>
         </div>
   </div>
+
+  <div class="max-w-7xl mx-auto px-10 py-20">
+    <div class="grid grid-cols-4">
+        <div class="flex gap-5">
+          <div>
+            <img src="../../assets//images/box-img-1.png" alt="">
+          </div>
+          <div>
+            Persoonlijk <br> advies
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div>
+            <img src="../../assets//images/box-img-2.png" alt="">
+          </div>
+          <div>
+            100% <br>  tevredenheidsgarantie 
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div>
+            <img src="../../assets//images/box-img-3.png" alt="">
+          </div>
+          <div>
+            Installatie door  <br> gecertificeerde monteurs
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div>
+            <img src="../../assets//images/box-img-4.png" alt="">
+          </div>
+          <div>
+            Milieuvriendelijke <br> Oplossingen
+          </div>
+        </div>
+    </div>
+
+  </div>
+  </div>
 </template>
-
-<script setup>
-</script>
-
-<style scoped>
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-</style>

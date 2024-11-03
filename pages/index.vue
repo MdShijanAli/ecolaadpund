@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-
 import Home from '~/views/home/index.vue';
 
 const title = ref('Home');
@@ -13,6 +12,10 @@ const title = ref('Home');
 // metadata for head
 useHead({
   title: title.value,
+});
+
+definePageMeta({
+  layout: 'main-layout',
 });
 
 // metadata for seo
