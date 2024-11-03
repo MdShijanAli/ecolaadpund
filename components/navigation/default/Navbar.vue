@@ -8,22 +8,22 @@
       </div>
       <div>
         <ul class="flex gap-5 items-center text-white text-md">
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/onze-laadpalen">Onze laadpalen</NuxtLink>
           </li>
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/laadpaal-thuis">Laadpaal thuis</NuxtLink>
           </li>
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/installatie">Installatie</NuxtLink>
           </li>
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/shop">Shop</NuxtLink>
           </li>
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/over-ons">Over ons</NuxtLink>
           </li>
-          <li>
+          <li class="hover:text-[#37D153]">
             <NuxtLink to="/contact">Contact</NuxtLink>
           </li>
         </ul>
