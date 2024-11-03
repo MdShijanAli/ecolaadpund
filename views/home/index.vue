@@ -268,10 +268,36 @@
           <IconsArrowRight class="text-xl" />
         </button>
       </div>
+
+      <!-- Plug in Section -->
+      <div class="grid grid-cols-2 justify-between my-16">
+        <div class="p-10">
+          <h3 class="text-3xl">
+            Maak uw woonlocatie of bedrijf klaar voor de toekomst met onze
+            schaalbare oplossingen voor het opladen van EV's.
+          </h3>
+
+          <button
+            class="bg-white hover:bg-primary border transition duration-300 ease-in-out text-black py-2 ps-5 pr-3 rounded-full mt-10 flex items-center gap-20"
+          >
+            Bekijk onze oplaadstations
+            <span class="bg-primary p-2 rounded-full">
+              <IconsArrowRight class="text-xl" />
+            </span>
+          </button>
+        </div>
+
+        <div class="flex justify-end">
+          <div>
+            <img :src="plugImg" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import plugImg from "~/assets/images/plug-img.png";
 import productImg1 from "~/assets/images/product-1.png";
 </script>
