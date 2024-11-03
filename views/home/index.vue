@@ -293,11 +293,35 @@
           </div>
         </div>
       </div>
+
+      <!-- Changing Station Section -->
+      <div>
+        <h3 class="text-3xl">Charging solutions for</h3>
+      </div>
+      <div class="grid grid-cols-2 gap-5 justify-between mb-16 mt-8">
+        <div class="relative">
+          <img :src="homeCharging" alt="" />
+          <ButtonHoverButton
+            class="absolute bottom-5 left-5"
+            caption="Privé thuis"
+          />
+        </div>
+
+        <div class="relative">
+          <img :src="hero3" alt="" />
+          <ButtonHoverButton
+            class="absolute bottom-5 left-5"
+            caption="Zakelijke"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import hero3 from "~/assets/images/Hero-03-1.png";
+import homeCharging from "~/assets/images/home-charging.png";
 import plugImg from "~/assets/images/plug-img.png";
 import productImg1 from "~/assets/images/product-1.png";
 </script>
