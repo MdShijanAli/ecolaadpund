@@ -30,6 +30,9 @@ module.exports = {
       },
       fontSize: {
         'breadCrumbHeader': '58px',
+        'title': '36px',
+        'quatation': '40px',
+        'base24': '24px',
       },
     },
   },

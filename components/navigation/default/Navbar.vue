@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-10 py-5 flex justify-between items-center">
       <div class="w-[200px]">
         <NuxtLink to="/">
-          <img :src="logo" alt="logo" />
+          <img src="/images/logo-white.png" alt="logo" />
         </NuxtLink>
       </div>
       <div>
@@ -44,7 +44,6 @@
 </template>
 
 <script setup>
-import logo from "~/assets/images/logo-white.png";
 import AccountIcon from "~/components/icons/AccountIcon.vue";
 import ShoppingCartIcon from "~/components/icons/ShoppingCartIcon.vue";
 </script>

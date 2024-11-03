@@ -3,15 +3,12 @@
     <div class="">
       <div class="">
         <div class="w-full">
-          <img
-            class="bg-black opacity-100 w-full"
-            src="../../assets/images/banner-1.png"
-          />
+          <img class="bg-black opacity-100 w-full" src="/images/banner-1.png" />
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-10">
-        <div class="absolute top-80 w-full grid grid-cols-2 justify-between">
+      <div class="relative max-w-7xl mx-auto px-10">
+        <div class="grid grid-cols-2 justify-between absolute bottom-10 left-0 w-full">
           <div class="col-span-1">
             <h1 class="text-6xl text-white font-semibold">
               De revolutionaire <br />
@@ -26,9 +23,9 @@
               </span>
             </button>
           </div>
-          <div class="col-span-1">
+          <div class="col-span-1 flex justify-end">
             <div class="bg-white rounded-2xl p-5 w-[300px]">
-              <h3 class="text-primary text-xl">
+              <h3 class="text-primary text-base24 font-semibold">
                 Persoonlijk advies nodig? Dat geven we gratis.
               </h3>
               <p class="py-3">
@@ -69,7 +66,7 @@
       <div class="grid md:grid-cols-4 sm:grid-cols-2 py-20">
         <div class="flex gap-5">
           <div>
-            <img src="../../assets//images/box-img-1.png" alt="" />
+            <img src="/images/box-img-1.png" alt="" />
           </div>
           <div>
             Persoonlijk <br />
@@ -78,7 +75,7 @@
         </div>
         <div class="flex gap-5">
           <div>
-            <img src="../../assets//images/box-img-2.png" alt="" />
+            <img src="/images/box-img-2.png" alt="" />
           </div>
           <div>
             100% <br />
@@ -87,7 +84,7 @@
         </div>
         <div class="flex gap-5">
           <div>
-            <img src="../../assets//images/box-img-3.png" alt="" />
+            <img src="/images/box-img-3.png" alt="" />
           </div>
           <div>
             Installatie door <br />
@@ -96,7 +93,7 @@
         </div>
         <div class="flex gap-5">
           <div>
-            <img src="../../assets//images/box-img-4.png" alt="" />
+            <img src="/images/box-img-4.png" alt="" />
           </div>
           <div>
             Milieuvriendelijke <br />
@@ -108,7 +105,7 @@
       <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-5 pt-10 pb-5">
         <div class="bg-productBg p-8 rounded-2xl">
           <div class="flex justify-center">
-            <img :src="productImg1" alt="" />
+            <img src="/images/product-1.png" alt="" />
           </div>
 
           <div class="mt-10">
@@ -146,7 +143,7 @@
         </div>
         <div class="bg-productBg p-8 rounded-2xl">
           <div class="flex justify-center">
-            <img :src="productImg1" alt="" />
+            <img src="/images/product-1.png" alt="" />
           </div>
 
           <div class="mt-10">
@@ -184,7 +181,7 @@
         </div>
         <div class="bg-productBg p-8 rounded-2xl">
           <div class="flex justify-center">
-            <img :src="productImg1" alt="" />
+            <img src="/images/product-1.png" alt="" />
           </div>
 
           <div class="mt-10">
@@ -222,7 +219,7 @@
         </div>
         <div class="bg-productBg p-8 rounded-2xl">
           <div class="flex justify-center">
-            <img :src="productImg1" alt="" />
+            <img src="/images/product-1.png" alt="" />
           </div>
 
           <div class="mt-10">
@@ -289,7 +286,7 @@
 
         <div class="flex justify-end">
           <div>
-            <img :src="plugImg" alt="" />
+            <img src="/images/plug-img.png" alt="" />
           </div>
         </div>
       </div>
@@ -300,7 +297,7 @@
       </div>
       <div class="grid grid-cols-2 gap-5 justify-between mb-16 mt-8">
         <div class="relative">
-          <img :src="homeCharging" alt="" />
+          <img src="/images/home-charging.png" alt="" />
           <ButtonHoverButton
             class="absolute bottom-5 left-5"
             caption="Privé thuis"
@@ -308,7 +305,7 @@
         </div>
 
         <div class="relative">
-          <img :src="hero3" alt="" />
+          <img src="/images/Hero-03-1.png" alt="" />
           <ButtonHoverButton
             class="absolute bottom-5 left-5"
             caption="Zakelijke"
@@ -316,12 +313,35 @@
         </div>
       </div>
     </div>
+
+    <!-- Feedback Section -->
+    <div class="py-10">
+      <div class="bg-[#DEEFE1] p-10 rounded-b-3xl relative z-50">
+        <div class="max-w-7xl mx-auto px-10">
+          <h3 class="text-title leading-tight">
+            Wij zoeken de beste <br />
+            oplossing voor jou.
+          </h3>
+        </div>
+      </div>
+      <div class="w-full -mt-10 relative -z-10">
+        <img class="w-full" src="/images/fedback-img.png" alt="" />
+        <div class="relative max-w-7xl mx-auto px-10">
+          <div class="grid grid-cols-2 justify-between items-center absolute bottom-10 left-0 w-full">
+            <div>
+              <h3 class="text-quatation text-white">
+                "Satisfaction Isn’t Just a Goal—It’s Our Standard."
+              </h3>
+            </div>
+            <div class="flex justify-end relative z-50">
+              <ButtonHoverButton caption="Aanvraag persoonlijk advies" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import hero3 from "~/assets/images/Hero-03-1.png";
-import homeCharging from "~/assets/images/home-charging.png";
-import plugImg from "~/assets/images/plug-img.png";
-import productImg1 from "~/assets/images/product-1.png";
 </script>
