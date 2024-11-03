@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         // Add your custom colors here
         primary: '#37D153',
+        productBg: '#F5F5F5',
         secondary: '#ffed4a',
         background: '#F4F4F4',
         paragraph: '#454545',
