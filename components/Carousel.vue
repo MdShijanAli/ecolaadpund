@@ -1,50 +1,85 @@
 <template>
-  <!-- Slider -->
-  <div
-    data-hs-carousel='{
-  "loadingClasses": "opacity-0",
-  "dotsItemClasses": "hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
-  "slidesQty": {
-    "xs": 1,
-    "lg": 5
-  },
-  "isDraggable": true
-}'
-    class="relative"
+  <Swiper
+    :slidesPerView="5"
+    :spaceBetween="30"
+    :grabCursor="true"
+    :loop="true"
+    :navigation="true"
+    :modules="modules"
+    class="mySwiper"
   >
-    <div class="hs-carousel w-full overflow-hidden rounded-lg">
-      <div class="relative min-h-72 -mx-1">
-        <div
-          class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 cursor-grab transition-transform duration-700 hs-carousel-dragging:transition-none hs-carousel-dragging:cursor-grabbing"
-        >
-          <div
-            v-for="(item, ind) in lists"
-            :key="ind"
-            class="hs-carousel-slide px-1 rounded-2xl mx-2"
-          >
-            <div
-              class="flex justify-center h-full bg-[#D9D9D9] p-6 dark:bg-neutral-900 rounded-3xl"
-            >
-              <span
-                class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
-                >{{ item.title }}</span
-              >
-            </div>
-          </div>
+    <SwiperSlide v-for="(item, ind) in lists" :key="ind" class="min-h-[350px]">
+      <div class="p-6">
+        <div class="flex items-center">
+          <template v-if="item?.rating">
+            <IconsStartIcon
+              v-for="(star, starInd) in item?.rating"
+              :key="starInd"
+              class="text-[#FDC426]"
+            />
+          </template>
+          <template v-if="item?.rating && item?.rating < 5">
+            <IconsBlankStarIcon
+              v-for="(star, starInd) in 5 - item?.rating"
+              :key="starInd"
+              class="text-[#FDC426]"
+            />
+          </template>
         </div>
+        <p class="mt-3 text-base">{{ item?.title }}</p>
+        <p class="text-paragraph my-5">{{ item?.description }}</p>
+        <h3 class="text-primary">{{ item?.name }}</h3>
       </div>
-    </div>
+    </SwiperSlide>
 
-    <CarouselPagination />
-  </div>
-  <!-- End Slider -->
+    <div>
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+      <CarouselPagination />
+    </div>
+  </Swiper>
 </template>
 
 <script setup>
+import "swiper/css";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css/pagination";
+
 const props = defineProps({
   lists: {
     type: Array,
     default: [],
   },
 });
+
+const modules = ref([Pagination, Navigation]);
 </script>
+
+
+<style scoped>
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #f5f5f5;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>

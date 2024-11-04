@@ -372,9 +372,15 @@
     </div>
 
     <!-- Carousel Section -->
-    <div class="bg-[#F5F5F5] py-20">
+    <div class="py-20">
+      <div class="max-w-7xl mx-auto px-10 mb-10">
+        <h3 class="text-title mb-2">Feedback van klanten</h3>
+        <div>
+          <img src="/images/google.png" alt="">
+        </div>
+      </div>
       <div>
-        <Carousel :lists="slides" />
+        <Carousel :lists="reviewLists" />
       </div>
     </div>
   </div>
@@ -432,30 +438,49 @@ const accordionLists = ref([
   },
 ]);
 
-const slides = ref([
+const reviewLists = ref([
   {
     id: 1,
-    title: "First slide",
+    title: "Betaalbare en efficiënte laadoplossing voor EV",
+    description: "Ik ben zo blij dat ik Ecolaadpunt heb gevonden. Hun prijzen waren concurrerend en het laadstation is perfect voor mijn behoeften. Het installatie team was vriendelijk en liet alles schoon achter. Een zeer professionele service!",
+    name: "— David P., Den Haag",
+    rating: 5
   },
   {
     id: 2,
-    title: "Second slide",
+    title: "Geweldige ervaring van begin tot eind",
+    description: "Ik was nieuw in EV-laden, maar Ecolaadpunt gaf me alle begeleiding die ik nodig had. Ze hielpen me om mijn opties te begrijpen, en het installatieproces verliep soepel. Het station werkt perfect—superhandig!",
+    name: "— Lisa H., Utrecht",
+    rating: 5
   },
   {
     id: 3,
-    title: "Third slide",
+    title: "Uitstekende service en ondersteuning!",
+    description: "Ecolaadpunt maakte het proces zo eenvoudig! Hun team hielp me bij het kiezen van de perfecte laadoplossing voor thuis, en de installatie verliep vlekkeloos. Nu kan ik mijn EV 's nachts zonder zorgen opladen. Ik raad ze zeker aan!",
+    name: "— Sophie D., Amsterdam",
+    rating: 4
   },
   {
     id: 4,
-    title: "Fourth slide",
+    title: "Betrouwbare en snelle installatie van laadstation",
+    description: "We hebben ons laadstation laten installeren door Ecolaadpunt, en het is fantastisch. De installatie werd op tijd uitgevoerd, en het team was erg professioneel. Onze EV laadt snel en efficiënt op. Heel tevreden!",
+    name: "— Mark V., Rotterdam",
+    rating: 5
   },
   {
     id: 5,
-    title: "Fifth slide",
+    title: "Betaalbare en efficiënte laadoplossing voor EV",
+    description: "Ik ben zo blij dat ik Ecolaadpunt heb gevonden. Hun prijzen waren concurrerend en het laadstation is perfect voor mijn behoeften. Het installatie team was vriendelijk en liet alles schoon achter. Een zeer professionele service!",
+    name: "— Lisa H., Utrecht",
+    rating: 5
   },
   {
     id: 6,
-    title: "Sixth slide",
+    title: "Betaalbare en efficiënte laadoplossing voor EV",
+    description: "Ik ben zo blij dat ik Ecolaadpunt heb gevonden. Hun prijzen waren concurrerend en het laadstation is perfect voor mijn behoeften. Het installatie team was vriendelijk en liet alles schoon achter. Een zeer professionele service!",
+    name: "— Lisa H., Utrecht",
+    rating: 5
   },
-]);
+])
+
 </script>

@@ -35,7 +35,8 @@ module.exports = {
         'quatation': '40px',
         'base24': '24px',
         'base': '16px',
-        'footerTitle': '20px'
+        'footerTitle': '20px',
+        'paragraph': '14px'
       },
     },
   },
