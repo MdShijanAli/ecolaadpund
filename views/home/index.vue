@@ -319,11 +319,19 @@
     <!-- Feedback Section -->
     <div class="py-10">
       <div class="bg-[#DEEFE1] p-10 rounded-b-3xl relative z-50">
-        <div class="max-w-7xl mx-auto px-10">
-          <h3 class="text-title leading-tight">
-            Wij zoeken de beste <br />
-            oplossing voor jou.
-          </h3>
+        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center">
+          <div>
+            <h3 class="text-title leading-tight">
+              Wij zoeken de beste <br />
+              oplossing voor jou.
+            </h3>
+          </div>
+          <div>
+            <ButtonHoverButton
+              caption="Bekijk onze oplaadstations"
+              color="black"
+            />
+          </div>
         </div>
       </div>
       <div class="w-full -mt-10 relative -z-10">
@@ -366,6 +374,13 @@
         <div>
           <LazyAccordian :lists="accordionLists" />
         </div>
+      </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="bg-[#F5F5F5] py-20">
+      <div>
+        <Carousel :lists="slides" />
       </div>
     </div>
   </div>
@@ -420,6 +435,33 @@ const accordionLists = ref([
     title: "Is mijn meterkast geschikt voor een laadpaal?",
     description:
       "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+]);
+
+const slides = ref([
+  {
+    id: 1,
+    title: "First slide",
+  },
+  {
+    id: 2,
+    title: "Second slide",
+  },
+  {
+    id: 3,
+    title: "Third slide",
+  },
+  {
+    id: 4,
+    title: "Fourth slide",
+  },
+  {
+    id: 5,
+    title: "Fifth slide",
+  },
+  {
+    id: 6,
+    title: "Sixth slide",
   },
 ]);
 </script>
