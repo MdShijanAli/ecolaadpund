@@ -372,7 +372,7 @@
     </div>
 
     <!-- Carousel Section -->
-    <div class="py-20">
+    <div class="py-20 rounded-b-3xl z-50">
       <div class="max-w-7xl mx-auto px-10 mb-10">
         <h3 class="text-title mb-2">Feedback van klanten</h3>
         <div>
