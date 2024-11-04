@@ -258,14 +258,8 @@
           </div>
         </div>
       </div>
-
-      <div class="flex items-center gap-1 justify-end">
-        <button class="p-2 rounded-full cursor-pointer">
-          <IconsArrowLeftIcon class="text-xl" />
-        </button>
-        <button class="p-2 rounded-full cursor-pointer">
-          <IconsArrowRight class="text-xl" />
-        </button>
+      <div>
+        <CarouselPagination />
       </div>
 
       <!-- Plug in Section -->
