@@ -4,4 +4,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['@/assets/css/index.css', '@/assets/scss/main.scss'],
+  plugins: ["~/plugins/preline.client.ts"],
 })

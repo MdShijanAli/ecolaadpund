@@ -8,7 +8,9 @@
       </div>
 
       <div class="relative max-w-7xl mx-auto px-10">
-        <div class="grid grid-cols-2 justify-between absolute bottom-10 left-0 w-full">
+        <div
+          class="grid grid-cols-2 justify-between absolute bottom-10 left-0 w-full"
+        >
           <div class="col-span-1">
             <h1 class="text-6xl text-white font-semibold">
               De revolutionaire <br />
@@ -327,7 +329,9 @@
       <div class="w-full -mt-10 relative -z-10">
         <img class="w-full" src="/images/fedback-img.png" alt="" />
         <div class="relative max-w-7xl mx-auto px-10">
-          <div class="grid grid-cols-2 justify-between items-center absolute bottom-10 left-0 w-full">
+          <div
+            class="grid grid-cols-2 justify-between items-center absolute bottom-10 left-0 w-full"
+          >
             <div>
               <h3 class="text-quatation text-white">
                 "Satisfaction Isn’t Just a Goal—It’s Our Standard."
@@ -340,8 +344,82 @@
         </div>
       </div>
     </div>
+
+    <div class="max-w-7xl mx-auto px-10 py-20">
+      <div class="grid grid-cols-2 justify-between">
+        <div>
+          <h3 class="text-title font-semibold">
+            Snelle antwoorden op <br />
+            vragen die je hebt!
+          </h3>
+
+          <p class="my-5 max-w-[350px]">
+            De keuze is reuze en het kiezen van de meest geschikte laadpaal kan
+            een lastige opgave zijn. Wij helpen je graag een handje op weg.
+          </p>
+
+          <p class="mt-14">
+            Can't find what you're looking for? <br />Contact us here: <br />
+            <span class="text-primary">info@ecolaadpunt.com</span>
+          </p>
+        </div>
+        <div>
+          <LazyAccordian :lists="accordionLists" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+const accordionLists = ref([
+  {
+    id: 1,
+    title: "Kan ik een laadpaal thuis aanschaffen als ik geen eigen oprit heb?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 2,
+    title: "Waar kan ik het beste mijn laadpaal plaatsen?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 3,
+    title: "Wil ik Dynamic Load Balancing op mijn laadpaal?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 4,
+    title: "Laden via stroom van zonnepanelen?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 5,
+    title: "Wat kost het laden van mijn elektrische auto?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 6,
+    title: "Wat zijn de beste laadpassen van 2022?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 7,
+    title: "Kan ik subsidie krijgen voor mijn laadpaal thuis?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+  {
+    id: 8,
+    title: "Is mijn meterkast geschikt voor een laadpaal?",
+    description:
+      "This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.",
+  },
+]);
 </script>

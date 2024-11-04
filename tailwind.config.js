@@ -8,6 +8,7 @@ module.exports = {
     './nuxt.config.{js,ts}',
     './app.vue', 
     './views/**/*.{vue,js}',
+   './node_modules/preline/preline.js',
   ],
   theme: {
     extend: {
@@ -33,8 +34,11 @@ module.exports = {
         'title': '36px',
         'quatation': '40px',
         'base24': '24px',
+        'base': '16px'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 }
