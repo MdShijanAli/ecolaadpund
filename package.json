@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
     "@preline/accordion": "^2.5.0",
+    "@preline/carousel": "^2.5.0",
     "@preline/collapse": "^2.5.0",
     "nuxt": "^3.13.2",
     "nuxt-swiper": "^1.2.2",

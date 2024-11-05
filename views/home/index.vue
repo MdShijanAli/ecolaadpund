@@ -54,7 +54,7 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-10">
-      <div class="grid md:grid-cols-4 sm:grid-cols-2 py-20">
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 py-20">
         <LazyBoxItem v-for="(item, ind) in boxItems" :key="ind" :item="item" />
       </div>
 
@@ -65,7 +65,7 @@
           kunt kiezen.
         </h3>
       </div>
-      <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-5 pt-10 pb-5">
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 pt-10 pb-5">
         <LazySingleProduct
           v-for="(item, ind) in productLists"
           :key="ind"
@@ -77,20 +77,22 @@
       </div>
 
       <!-- Plug in Section -->
-      <div class="grid grid-cols-2 justify-between my-16">
+      <div class="md:grid md:grid-cols-2 flex flex-col-reverse justify-center md:justify-between md:my-16 my-10">
         <div class="p-8">
           <h3 class="text-title leading-tight">
             Maak uw woonlocatie of bedrijf klaar voor de toekomst met onze
             schaalbare oplossingen voor het opladen van EV's.
           </h3>
 
-          <LazyButtonHoverButton
+          <div class="flex justify-center md:grid md:justify-start">
+            <LazyButtonHoverButton
             caption="Bekijk onze oplaadstations"
             class="mt-10"
           />
+          </div>
         </div>
 
-        <div class="flex justify-end">
+        <div class="flex md:justify-end justify-center">
           <div>
             <img src="/images/plug-img.png" alt="" />
           </div>
@@ -101,7 +103,7 @@
       <div>
         <h3 class="text-title">Charging solutions for</h3>
       </div>
-      <div class="grid grid-cols-2 gap-5 justify-between mb-16 mt-8">
+      <div class="grid sm:grid-cols-2 gap-5 justify-between md:mb-16 mb-10 mt-8">
         <div class="relative group">
           <img class="" src="/images/home-charging.png" alt="" />
           <ButtonHoverButton
@@ -123,7 +125,7 @@
     <!-- Feedback Section -->
     <div class="py-10">
       <div class="bg-[#DEEFE1] p-10 rounded-b-3xl relative z-50">
-        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-10 md:flex md:justify-between md:items-center grid gap-5 justify-center">
           <div>
             <h3 class="text-title leading-tight">
               Wij zoeken de beste <br />
@@ -138,7 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="w-full -mt-10 relative">
+      <div class="w-full md:-mt-10 -mt-5 relative">
         <img class="w-full" src="/images/fedback-img.png" alt="" />
         <div class="relative max-w-7xl mx-auto px-10">
           <div
@@ -158,7 +160,7 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-10 py-10">
-      <div class="grid grid-cols-2 justify-between">
+      <div class="grid md:grid-cols-2 justify-between gap-10">
         <div>
           <h3 class="text-title font-normal leading-tight">
             Snelle antwoorden op <br />
@@ -182,7 +184,7 @@
     </div>
 
     <!-- Carousel Section -->
-    <div class="py-20 rounded-b-3xl z-50">
+    <div class="md:py-20 py-10 rounded-b-3xl z-50">
       <div class="max-w-7xl mx-auto px-10 mb-10">
         <h3 class="text-title mb-2">Feedback van klanten</h3>
         <div>

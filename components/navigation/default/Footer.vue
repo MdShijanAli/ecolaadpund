@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-10 pt-5">
+      <div class="grid md:grid-cols-4 grid-cols-2 gap-10 pt-5">
         <div>
           <p class="text-footerTitle font-normal">Privé thuis</p>
           <p class="text-footerTitle font-normal">Zakelijke</p>
