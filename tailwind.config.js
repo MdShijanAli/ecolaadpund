@@ -18,7 +18,6 @@ module.exports = {
         productBg: '#F5F5F5',
         secondary: '#ffed4a',
         background: '#F4F4F4',
-        paragraph: '#454545',
         footer: '#26292E',
         bannerBg: '#3F99F1',
         product: '#666666',
@@ -30,13 +29,14 @@ module.exports = {
         // Add more custom colors as needed
       },
       fontSize: {
-        'breadCrumbHeader': '58px',
+        'bigTitle': '74px',
         'title': '36px',
         'quatation': '40px',
         'base24': '24px',
         'base': '16px',
         'footerTitle': '20px',
-        'paragraph': '14px'
+        'paragraph': '14px',
+        'extraSmall': '11px'
       },
     },
   },

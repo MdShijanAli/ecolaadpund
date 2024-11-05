@@ -8,29 +8,14 @@
       </div>
       <div>
         <ul class="flex gap-5 items-center text-white text-md">
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/onze-laadpalen">Onze laadpalen</NuxtLink>
-          </li>
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/laadpaal-thuis">Laadpaal thuis</NuxtLink>
-          </li>
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/installatie">Installatie</NuxtLink>
-          </li>
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/shop">Shop</NuxtLink>
-          </li>
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/over-ons">Over ons</NuxtLink>
-          </li>
-          <li class="hover:text-[#37D153]">
-            <NuxtLink to="/contact">Contact</NuxtLink>
+          <li v-for="(item, ind) in menuLists" :key="ind" class="hover:text-[#37D153] text-paragraph">
+            <NuxtLink :to="item?.path">{{ item?.name }}</NuxtLink>
           </li>
         </ul>
       </div>
       <div class="flex items-center gap-3">
         <div>
-          <ButtonBaseButton caption="Zakelijk" color="btn-white" />
+          <ButtonBaseButton caption="Zakelijk" color="btn-white" class="text-paragraph" />
         </div>
         <div>
           <ButtonBaseButton :icon="AccountIcon" color="btn-white" />
@@ -46,6 +31,40 @@
 <script setup>
 import AccountIcon from "~/components/icons/AccountIcon.vue";
 import ShoppingCartIcon from "~/components/icons/ShoppingCartIcon.vue";
+
+const menuLists = ref([
+  {
+    id: 1,
+    name: "Onze laadpalen",
+    path: 'onze-laadpalen'
+  },
+  {
+    id: 2,
+    name: "Laadpaal thuis",
+    path: 'laadpaal-thuis'
+  },
+  {
+    id: 3,
+    name: "Installatie",
+    path: 'installatie'
+  },
+  {
+    id: 4,
+    name: "Shop",
+    path: 'shop'
+  },
+  {
+    id: 5,
+    name: "Over ons",
+    path: 'over-ons'
+  },
+  {
+    id: 6,
+    name: "Contact",
+    path: 'contact'
+  },
+])
+
 </script>
 
 <style scoped>

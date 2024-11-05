@@ -28,18 +28,18 @@
         </div>
         <p class="mt-3 text-base">{{ item?.title }}</p>
         <p class="text-paragraph my-5">{{ item?.description }}</p>
-        <h3 class="text-primary">{{ item?.name }}</h3>
+        <h3 class="text-base text-primary">{{ item?.name }}</h3>
       </div>
     </SwiperSlide>
 
     <div>
-      <div class="swiper-pagination"></div>
-      <!-- If we need navigation buttons -->
+<!--       <div class="swiper-pagination"></div>
+
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+
+      <div class="swiper-scrollbar"></div> -->
       <CarouselPagination />
     </div>
   </Swiper>

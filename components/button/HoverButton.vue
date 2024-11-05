@@ -1,6 +1,6 @@
 <template>
   <button
-    class="hover:bg-primary border hover:border-primary transition duration-300 ease-in-out py-2 ps-5 pr-3 rounded-full flex items-center gap-20"
+    class="transition duration-300 ease-in-out py-2 ps-5 pr-3 rounded-full flex items-center gap-20 text-base"
     :class="colorStyle"
   >
     {{ caption }}
@@ -14,16 +14,19 @@
 const props = defineProps({
   caption: {
     type: String,
-    default: "Click"
+    default: "Click",
   },
   color: {
     type: String,
-    default: 'white'
-  }
-})
+    default: "white",
+  },
+});
 
-const colorStyle = computed(()=> {
-    return props.color === 'white' ? 'bg-white text-black' : props.color === 'black' ? 'bg-black text-white' : 'bg-white text-black'
-})
-
+const colorStyle = computed(() => {
+  return props.color === "white"
+    ? "bg-white text-black hover:bg-black border hover:text-white border-[#737373] hover:border-black"
+    : props.color === "black"
+    ? "bg-black hover:bg-white hover:text-black text-white border-black hover:border-white"
+    : "bg-white text-black";
+});
 </script>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
     "nuxt": "^3.13.2",
+    "nuxt-swiper": "^1.2.2",
     "preline": "^2.5.1",
     "swiper": "^11.1.14",
     "vue": "latest",

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-10">
       <div class="flex justify-between mt-10 border-b pb-3 border-borderColor">
         <div class="w-[196px]">
-          <img class="w-full" src="../../../public/images/logo.png" alt="" />
+          <img class="w-full" src="/images/logo.png" alt="" />
         </div>
         <div>
           <ButtonHoverButton caption="Geef mij advies" />
