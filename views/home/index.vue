@@ -58,6 +58,7 @@
         <LazyBoxItem v-for="(item, ind) in boxItems" :key="ind" :item="item" />
       </div>
 
+      <!-- Product Section -->
       <div>
         <h3 class="text-title leading-tight">
           We bieden een reeks <br />
@@ -65,7 +66,21 @@
           kunt kiezen.
         </h3>
       </div>
-      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 pt-10 pb-5">
+
+      <div>
+        <Carousel height="min-h-[520px]">
+          <LazySingleProduct
+            v-for="(item, ind) in productLists"
+            :key="ind"
+            :item="item"
+            class="hs-carousel-slide mx-3 rounded-3xl h-[480px] bg-productBg mt-10"
+          />
+        </Carousel>
+      </div>
+
+<!--       <div
+        class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 pt-10 pb-5"
+      >
         <LazySingleProduct
           v-for="(item, ind) in productLists"
           :key="ind"
@@ -74,10 +89,12 @@
       </div>
       <div>
         <CarouselPagination />
-      </div>
+      </div> -->
 
       <!-- Plug in Section -->
-      <div class="md:grid md:grid-cols-2 flex flex-col-reverse justify-center md:justify-between md:my-16 my-10">
+      <div
+        class="md:grid md:grid-cols-2 flex flex-col-reverse justify-center md:justify-between md:my-16 my-10"
+      >
         <div class="p-8">
           <h3 class="text-title leading-tight">
             Maak uw woonlocatie of bedrijf klaar voor de toekomst met onze
@@ -86,9 +103,9 @@
 
           <div class="flex justify-center md:grid md:justify-start">
             <LazyButtonHoverButton
-            caption="Bekijk onze oplaadstations"
-            class="mt-10"
-          />
+              caption="Bekijk onze oplaadstations"
+              class="mt-10"
+            />
           </div>
         </div>
 
@@ -103,7 +120,9 @@
       <div>
         <h3 class="text-title">Charging solutions for</h3>
       </div>
-      <div class="grid sm:grid-cols-2 gap-5 justify-between md:mb-16 mb-10 mt-8">
+      <div
+        class="grid sm:grid-cols-2 gap-5 justify-between md:mb-16 mb-10 mt-8"
+      >
         <div class="relative group">
           <img class="" src="/images/home-charging.png" alt="" />
           <ButtonHoverButton
@@ -125,7 +144,9 @@
     <!-- Feedback Section -->
     <div class="py-10">
       <div class="bg-[#DEEFE1] p-10 rounded-b-3xl relative z-50">
-        <div class="max-w-7xl mx-auto px-10 md:flex md:justify-between md:items-center grid gap-5 justify-center">
+        <div
+          class="max-w-7xl mx-auto px-10 md:flex md:justify-between md:items-center grid gap-5 justify-center"
+        >
           <div>
             <h3 class="text-title leading-tight">
               Wij zoeken de beste <br />
@@ -192,7 +213,35 @@
         </div>
       </div>
       <div>
-        <Carousel :lists="reviewLists" />
+        <Carousel height="min-h-[350px]">
+          <div
+            v-for="(item, ind) in reviewLists"
+            :key="ind"
+            class="hs-carousel-slide mx-4 rounded-3xl h-[350px] bg-productBg"
+          >
+            <div class="p-6">
+              <div class="flex items-center">
+                <template v-if="item?.rating">
+                  <IconsStartIcon
+                    v-for="(star, starInd) in item?.rating"
+                    :key="starInd"
+                    class="text-[#FDC426]"
+                  />
+                </template>
+                <template v-if="item?.rating && item?.rating < 5">
+                  <IconsBlankStarIcon
+                    v-for="(star, starInd) in 5 - item?.rating"
+                    :key="starInd"
+                    class="text-[#FDC426]"
+                  />
+                </template>
+              </div>
+              <p class="mt-3 text-base">{{ item?.title }}</p>
+              <p class="text-paragraph my-5">{{ item?.description }}</p>
+              <h3 class="text-base text-primary">{{ item?.name }}</h3>
+            </div>
+          </div>
+        </Carousel>
       </div>
     </div>
   </div>
