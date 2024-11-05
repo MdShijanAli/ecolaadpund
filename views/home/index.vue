@@ -10,18 +10,20 @@
         </div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-10">
+      <div class="relative max-w-7xl mx-auto px-6">
         <div
-          class="grid grid-cols-2 justify-between absolute bottom-0 left-0 w-full"
+          class="grid md:grid-cols-2 md:justify-between gap-5 justify-center absolute bottom-0 left-0 w-full"
         >
           <div class="col-span-1">
-            <h1 class="text-bigTitle text-white font-medium leading-[115%]">
+            <h1 class="md:text-bigTitle sm:text-bigTitleResponsive text-[40px] text-center md:text-start text-white font-medium leading-[115%]">
               De revolutionaire <br />
               oplaadervaring.
             </h1>
-            <ButtonHoverButton caption="Onze oplossing" class="mt-16" />
+            <div class="flex md:justify-start justify-center">
+              <ButtonHoverButton caption="Onze oplossing" class="md:mt-16 mt-10" />
+            </div>
           </div>
-          <div class="col-span-1 flex justify-end">
+          <div class="col-span-1 flex md:justify-end justify-center">
             <div class="bg-white rounded-2xl p-5 w-[300px] shadow-xl">
               <h3 class="text-primary text-base24 leading-tight font-semibold">
                 Persoonlijk advies nodig? Dat geven we gratis.
@@ -53,14 +55,14 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-10">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 py-20">
         <LazyBoxItem v-for="(item, ind) in boxItems" :key="ind" :item="item" />
       </div>
 
       <!-- Product Section -->
       <div>
-        <h3 class="text-title leading-tight">
+        <h3 class="md:text-title text-titleResponsive leading-tight">
           We bieden een reeks <br />
           oplaadpunten waaruit je <br />
           kunt kiezen.
@@ -96,7 +98,7 @@
         class="md:grid md:grid-cols-2 flex flex-col-reverse justify-center md:justify-between md:my-16 my-10"
       >
         <div class="p-8">
-          <h3 class="text-title leading-tight">
+          <h3 class="md:text-title text-titleResponsive leading-tight">
             Maak uw woonlocatie of bedrijf klaar voor de toekomst met onze
             schaalbare oplossingen voor het opladen van EV's.
           </h3>
@@ -118,7 +120,7 @@
 
       <!-- Changing Station Section -->
       <div>
-        <h3 class="text-title">Charging solutions for</h3>
+        <h3 class="md:text-title text-titleResponsive">Charging solutions for</h3>
       </div>
       <div
         class="grid sm:grid-cols-2 gap-5 justify-between md:mb-16 mb-10 mt-8"
@@ -145,10 +147,10 @@
     <div class="py-10">
       <div class="bg-[#DEEFE1] p-10 rounded-b-3xl relative z-50">
         <div
-          class="max-w-7xl mx-auto px-10 md:flex md:justify-between md:items-center grid gap-5 justify-center"
+          class="max-w-7xl mx-auto px-6 md:flex md:justify-between md:items-center grid gap-5 justify-center"
         >
           <div>
-            <h3 class="text-title leading-tight">
+            <h3 class="md:text-title text-titleResponsive leading-tight">
               Wij zoeken de beste <br />
               oplossing voor jou.
             </h3>
@@ -162,17 +164,17 @@
         </div>
       </div>
       <div class="w-full md:-mt-10 -mt-5 relative">
-        <img class="w-full" src="/images/fedback-img.png" alt="" />
-        <div class="relative max-w-7xl mx-auto px-10">
+        <img class="w-full h-[300px] md:h-full" src="/images/fedback-img.png" alt="" />
+        <div class="relative max-w-7xl mx-auto px-6">
           <div
-            class="grid grid-cols-2 justify-between items-center absolute bottom-10 left-0 w-full"
+            class="grid md:grid-cols-2 md:justify-between justify-center items-center absolute md:bottom-10 bottom-5 left-0 w-full"
           >
             <div>
-              <h3 class="text-title text-white">
+              <h3 class="md:text-title text-titleResponsive text-white text-center md:text-left">
                 "Satisfaction Isn’t Just a Goal—It’s Our Standard."
               </h3>
             </div>
-            <div class="flex justify-end relative z-50">
+            <div class="flex md:justify-end justify-center relative z-50">
               <ButtonHoverButton caption="Aanvraag persoonlijk advies" />
             </div>
           </div>
@@ -180,10 +182,10 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-10 py-10">
+    <div class="max-w-7xl mx-auto px-6 py-10">
       <div class="grid md:grid-cols-2 justify-between gap-10">
         <div>
-          <h3 class="text-title font-normal leading-tight">
+          <h3 class="md:text-title text-titleResponsive font-normal leading-tight">
             Snelle antwoorden op <br />
             vragen die je hebt!
           </h3>
@@ -206,8 +208,8 @@
 
     <!-- Carousel Section -->
     <div class="md:py-20 py-10 rounded-b-3xl z-50">
-      <div class="max-w-7xl mx-auto px-10 mb-10">
-        <h3 class="text-title mb-2">Feedback van klanten</h3>
+      <div class="max-w-7xl mx-auto px-6 mb-10">
+        <h3 class="md:text-title text-titleResponsive mb-2">Feedback van klanten</h3>
         <div>
           <img src="/images/google.png" alt="" />
         </div>

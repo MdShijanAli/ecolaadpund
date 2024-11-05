@@ -1,16 +1,18 @@
 <template>
   <div class="bg-footerBg py-10">
     <div class="max-w-7xl mx-auto px-10">
-      <div class="flex justify-between mt-10 border-b pb-3 border-borderColor">
-        <div class="w-[196px]">
+      <div class="sm:flex sm:justify-between grid justify-center gap-5 mt-10 border-b pb-3 border-borderColor">
+        <div class="flex justify-center sm:block">
+          <div class="w-[196px]">
           <img class="w-full" src="/images/logo.png" alt="" />
+        </div>
         </div>
         <div>
           <ButtonHoverButton caption="Geef mij advies" />
         </div>
       </div>
 
-      <div class="grid md:grid-cols-4 grid-cols-2 gap-10 pt-5">
+      <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-10 pt-5">
         <div>
           <p class="text-footerTitle font-normal">Privé thuis</p>
           <p class="text-footerTitle font-normal">Zakelijke</p>

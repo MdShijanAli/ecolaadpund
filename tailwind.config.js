@@ -30,7 +30,9 @@ module.exports = {
       },
       fontSize: {
         'bigTitle': '74px',
+        'bigTitleResponsive': '54px',
         'title': '36px',
+        'titleResponsive': '26px',
         'quatation': '40px',
         'base24': '24px',
         'base': '16px',
